@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<script>
+    console.log("hello world!");
+
+    console.log("実行順01");
+
+    window.onload=function(){
+        console.log("実行順04");
+        for (var i=0; i<9; i++) {
+            console.log("i = "+i);
+            if(i == 5){
+                console.log("iが5です。");
+            }
+        }
+    }
+
+    jQuery(function($){
+        console.log("実行順03");
+    });
+
+    console.log("実行順02");
+
+</script>
+</body>
+</html>
